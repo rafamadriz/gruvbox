@@ -2,6 +2,8 @@
 Gruvbox
 </h1>
 
+![2021-May-27_1](https://user-images.githubusercontent.com/67771985/119880097-6d144800-bf1b-11eb-81e9-cf31dbb4500b.png)
+
 Just another [gruvbox](https://github.com/morhetz/gruvbox) theme.
 
 ## ✨ Features
