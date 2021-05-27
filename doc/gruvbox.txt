@@ -1,0 +1,187 @@
+*gruvbox.txt*
+
+CONTENTS                                     *gruvbox-contents*
+
+Introduction                                 |gruvbox-introduction|
+Installation                                 |gruvbox-installation|
+Usage                                        |gruvbox-usage|
+Configuration                                |gruvbox-configuration|
+FAQ                                          |gruvbox-faq|
+
+==============================================================================
+INTRODUCTION                                                 *gruvbox-introduction*
+
+Features~
+
+- Customizable.
+- Made to work with treesitter.
+- Support for some of the most popular plugins.
+- Designed to have a soft contrast for eye protection.
+- Multiple options to enable italic text.
+- Bold support.
+
+==============================================================================
+INSTALLATION                                                 *gruvbox*
+
+Via Plugin Manager~
+
+    Use your favorite plugin manager. Example [packer](https://github.com/wbthomason/packer.nvim):
+>
+        use "rafamadriz/gruvbox"
+<
+    Make sure to have [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) installed.
+
+==============================================================================
+USAGE                                                               *gruvbox-usage*
+
+Neovim~
+
+    To set the theme you can use the following.
+>
+        vim.cmd[[colorscheme gruvbox]]
+<
+    Or if your config is in VimScript use:
+>
+        colorscheme gruvbox
+<
+    See |gruvbox-configuration| for more configuration options.
+
+    If you want to apply this color scheme temporarily, run this command in
+    vim(this may cause broken colors):
+>
+        :colorscheme gruvbox
+<
+------------------------------------------------------------------------------
+
+Lualine~
+
+    To enable [lualine](https://github.com/hoob3rt/lualine.nvim) color
+    scheme, put this somewhere in your config:
+>
+        require('lualine').setup {
+          options = {
+            -- ... your lualine config
+            theme = 'gruvbox'
+            -- ... your lualine config
+          }
+        }
+<
+==============================================================================
+
+CONFIGURATION                                               *gruvbox-configuration*
+
+Note: the configuration options should be placed before `vim.cmd[[colorscheme gruvbox]]`
+
+E.g.
+>
+        vim.g.gruvbox_italic_keyword = true
+        vim.g.gruvbox_italic_function = true
+
+        vim.cmd[[colorscheme gruvbox]]
+<
+------------------------------------------------------------------------------
+                                                 *vim.g.gruvbox_italic_comment*
+vim.g.gruvbox_italic_comment~
+
+By default, italic is enabled in `Comment`. To disable italic in `Comment`, set
+this option to `false`.
+
+E.g.
+>
+        vim.g.gruvbox_italic_comment = false
+<
+------------------------------------------------------------------------------
+                                                          *vim.g.gruvbox_italic_keyword*
+vim.g.gruvbox_italic_keyword~
+
+This applies to conditionals and keywords like `for`, `do`, `while`, `loops` etc.
+
+        Available values: `true`, `false`
+        Default value: `false`
+
+E.g.
+>
+        vim.g.gruvbox_italic_keyword = true
+<
+Note: All of the italic options are designed to use with fonts that support cursive italics.
+See |gruvbox-faq| for more information.
+
+------------------------------------------------------------------------------
+                                                          *vim.g.gruvbox_italic_boolean*
+vim.g.gruvbox_italic_boolean~
+
+This applies to `true` and `false`.
+
+        Available values: `true`, `false`
+        Default value: `false`
+
+E.g.
+>
+        vim.g.gruvbox_italic_boolean = true
+<
+
+------------------------------------------------------------------------------
+                                                          *vim.g.gruvbox_italic_function*
+vim.g.gruvbox_italic_function~
+
+This applies to function (calls and definitions), method (calls and definitions) and
+built-in functions.
+
+        Available values: `true`, `false`
+        Default value: `false`
+
+E.g.
+>
+        vim.g.gruvbox_italic_function = true
+<
+------------------------------------------------------------------------------
+                                                          *vim.g.gruvbox_italic_variable*
+vim.g.gruvbox_italic_variable~
+
+This applies to variable names that are defined by the languages, like `this` or `self`.
+And any variable name that does not have another highlight group.
+
+        Available values: `true`, `false`
+        Default value: `false`
+
+E.g.
+>
+        vim.g.gruvbox_italic_variable = true
+<
+------------------------------------------------------------------------------
+                                                          *vim.g.gruvbox_bold*
+vim.g.gruvbox_bold~
+
+        Available values: `true`, `false`
+        Default value: `false`
+
+E.g.
+>
+        vim.g.gruvbox_bold = true
+<
+==============================================================================
+FAQ                                                                   *gruvbox-faq*
+
+It doesn't work as expected.~
+
+1. This color scheme is mainly designed for true colors, make sure of setting:
+`vim.o.termguicolors = true`
+
+2. To test if your terminal supports true colors, use the following
+[script](https://gist.github.com/XVilka/8346728).
+
+3. This colorscheme is made to look good with treesitter, if you don't have it,
+it won't look the same as the screenshoots.
+
+------------------------------------------------------------------------------
+
+How to enable cursive italic keywords?~
+
+1. Install a font that supports italics, for example [JetBrains-NerdFont](https://www.nerdfonts.com/font-downloads).
+
+2. Set the correct italic font for your terminal of choice.
+
+3. Enable italic text. E.g. `vim.g.gruvbox_italic_keyword = true`
+
+==============================================================================
+vim:tw=78:nosta:noet:ts=8:sts=0:ft=help:et:sw=4:fen:fdm=marker:fmr={{{,}}}:
