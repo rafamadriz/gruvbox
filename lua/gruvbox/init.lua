@@ -373,7 +373,7 @@ local function set_groups()
         SneakScope = {bg = c.bg0},
         -- Indent Blankline
         IndentBlanklineChar = {fg = c.gray1},
-        IndentBlanklineContextChar = {fg = c.fg},
+        IndentBlanklineContextChar = {fg = c.red},
         -- Nvim dap
         DapBreakpoint = {fg = c.red},
         DapStopped = {fg = c.green},
