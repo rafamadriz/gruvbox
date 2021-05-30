@@ -32,6 +32,7 @@ local function set_groups()
         SignColumn = {fg = c.fg, bg = c.bg1},
         EndOfBuffer = {fg = c.bg0, bg = c.bg0}, -- ~ lines at the end of a buffer
         NormalFloat = {fg = c.fg, bg = c.bg2}, -- normal text and background color for floating windows
+        FloatBorder = {fg = c.blue, bg = c.bg2},
         ColorColumn = {fg = c.none, bg = c.bg1}, --  used for the columns set with 'colorcolumn'
         Conceal = {fg = c.gray1, bg = c.none}, -- placeholder characters substituted for concealed text (see 'conceallevel')
         Cursor = {fg = c.cyan, bg = c.none, style = "reverse"}, -- the character under the cursor
@@ -267,8 +268,8 @@ local function set_groups()
         NeogitBranch = {fg = c.gray_alt},
         NeogitRemote = {fg = c.purple},
         NeogitHunkHeader = {fg = c.fg, bg = c.cyan},
-        NeogitHunkHeaderHighlight = {fg = c.blue, bg = c.bg1},
-        NeogitDiffContextHighlight = {fg = c.bg0, bg = c.bg1},
+        NeogitHunkHeaderHighlight = {fg = c.blue},
+        NeogitDiffContextHighlight = {fg = c.bg0},
         NeogitDiffDeleteHighlight = {fg = c.red},
         NeogitDiffAddHighlight = {fg = c.green},
         -- GitGutter
@@ -372,21 +373,21 @@ local function set_groups()
         Sneak = {fg = c.bg0, bg = c.green},
         SneakScope = {bg = c.bg0},
         -- Indent Blankline
-        IndentBlanklineChar = {fg = c.gray1},
-        IndentBlanklineContextChar = {fg = c.red},
+        IndentBlanklineChar = {fg = c.bg2},
+        IndentBlanklineContextChar = {fg = c.bg4},
         -- Nvim dap
         DapBreakpoint = {fg = c.red},
         DapStopped = {fg = c.green},
         -- Startify
         StartifyNumber = {fg = c.blue},
         StartifySelect = {fg = c.green},
-        StartifyBracket = {fg = c.gray},
+        StartifyBracket = {fg = c.purple},
         StartifySpecial = {fg = c.cyan},
         StartifyVar = {fg = c.blue},
         StartifyPath = {fg = c.gray0},
         StartifyFile = {fg = c.fg},
         StartifySlash = {fg = c.yellow},
-        StartifyHeader = {fg = c.red},
+        StartifyHeader = {fg = c.orange},
         StartifySection = {fg = c.red},
         StartifyFooter = {fg = c.green},
         -- EasyMotion

@@ -1,0 +1,13 @@
+gruvbox	gruvbox.txt	/*gruvbox*
+gruvbox-configuration	gruvbox.txt	/*gruvbox-configuration*
+gruvbox-contents	gruvbox.txt	/*gruvbox-contents*
+gruvbox-faq	gruvbox.txt	/*gruvbox-faq*
+gruvbox-introduction	gruvbox.txt	/*gruvbox-introduction*
+gruvbox-usage	gruvbox.txt	/*gruvbox-usage*
+gruvbox.txt	gruvbox.txt	/*gruvbox.txt*
+vim.g.gruvbox_bold	gruvbox.txt	/*vim.g.gruvbox_bold*
+vim.g.gruvbox_italic_boolean	gruvbox.txt	/*vim.g.gruvbox_italic_boolean*
+vim.g.gruvbox_italic_comment	gruvbox.txt	/*vim.g.gruvbox_italic_comment*
+vim.g.gruvbox_italic_function	gruvbox.txt	/*vim.g.gruvbox_italic_function*
+vim.g.gruvbox_italic_keyword	gruvbox.txt	/*vim.g.gruvbox_italic_keyword*
+vim.g.gruvbox_italic_variable	gruvbox.txt	/*vim.g.gruvbox_italic_variable*
